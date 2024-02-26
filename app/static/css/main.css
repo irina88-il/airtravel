@@ -1,0 +1,259 @@
+body {
+  font-family: Verdana;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.content-wrapper {
+  width: 100%;
+  display: flex;
+  padding: 50px 10%;
+}
+.content-wrapper .cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #0c73fe;
+  border-radius: 15px;
+  box-shadow: none;
+}
+.content-wrapper .cards-wrapper .top {
+  width: 100%;
+  border-bottom: none;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+.content-wrapper .cards-wrapper .top .search-bar-wrapper input {
+  outline: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 15px;
+  margin-right: 25px;
+  transition: all 0.3s ease;
+}
+.content-wrapper .cards-wrapper .top .search-bar-wrapper input:focus {
+  border-color: #0c73fe;
+}
+.content-wrapper .cards-wrapper .top .search-bar-wrapper button {
+  padding: 8px 16px;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: #ff6f32;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.content-wrapper .cards-wrapper .top .search-bar-wrapper button:hover {
+  transform: scale(1.1);
+}
+.content-wrapper .cards-wrapper .bottom {
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 0.15fr));
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+  justify-content: center;
+}
+.content-wrapper .cards-wrapper .bottom .card-wrapper {
+  background: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  overflow: hidden;
+  color: #000;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.content-wrapper .cards-wrapper .bottom .card-wrapper:hover {
+  transform: scale(1.05);
+}
+.content-wrapper .cards-wrapper .bottom .card-wrapper .preview {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.content-wrapper .cards-wrapper .bottom .card-wrapper .preview img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+.content-wrapper .cards-wrapper .bottom .card-wrapper .card-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.content-wrapper .cards-wrapper .bottom .card-wrapper .card-content .content-top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.content-wrapper .cards-wrapper .bottom .card-wrapper .card-content .content-top .title {
+  font-size: 18px;
+  text-align: center;
+}
+.content-wrapper .cards-wrapper .bottom .card-wrapper .card-content .content-bottom {
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+              "add-to-flight-btn add-to-flight-btn"
+              "details-link delete-link";
+  gap: 20px;
+}
+.content-wrapper .cards-wrapper .bottom .card-wrapper .card-content .content-bottom a {
+  padding: 8px 16px;
+  background: #ebefe3;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  text-align: center;
+}
+
+.content-wrapper .cards-wrapper .bottom .card-wrapper .card-content .content-bottom a.add-to-flight-btn {
+  grid-area: add-to-flight-btn;
+  background: darkblue;
+}
+
+.content-wrapper .cards-wrapper .bottom .card-wrapper .card-content .content-bottom a.details-link {
+  background: #ff6f32;
+  grid-area: details-link;
+}
+.content-wrapper .cards-wrapper .bottom .card-wrapper .card-content .content-bottom a.delete-link {
+  background: #0cfe91;
+  grid-area: delete-link;
+}
+.content-wrapper .cards-wrapper .bottom .card-wrapper .card-content .content-bottom a:hover {
+  transform: scale(1.1);
+}
+.content-wrapper .cards-wrapper .bottom .card-wrapper .card-content .content-bottom a:active {
+  transform: scale(0.96);
+}
+.content-wrapper .airline-details-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: #0c73fe;
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
+  box-shadow: none;
+  color: #fff;
+}
+.content-wrapper .airline-details-wrapper .return-link {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.content-wrapper .airline-details-wrapper .return-link:hover {
+  color: dodgerblue;
+}
+.content-wrapper .airline-details-wrapper .left img {
+  width: 600px;
+  height: 450px;
+  border-radius: 15px;
+}
+.content-wrapper .airline-details-wrapper .right {
+  width: calc(100% - 650px);
+}
+.content-wrapper .airline-details-wrapper .right .airline-info-container {
+  display: flex;
+  flex-direction: column;
+}
+.content-wrapper .airline-details-wrapper .right .airline-info-container .name {
+  font-size: 24px;
+}
+
+.content-wrapper .cards-wrapper .top .search-bar-wrapper a {
+  padding: 8px 16px;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: #ff6f32;
+  color: #fff;
+  transition: all .3s ease;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.content-wrapper .cards-wrapper .top .search-bar-wrapper .disabled {
+  padding: 8px 16px;
+  border-radius: 15px;
+  outline: none;
+  background: #0cfe91;
+  cursor: not-allowed;
+  margin-right: 20px;
+}
+
+.content-wrapper .bottom-container .airlines-container {
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 0.15fr));
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+  justify-content: center;
+}
+
+
+.content-wrapper .bottom-container .card-wrapper {
+  background: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  overflow: hidden;
+  color: #000;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.content-wrapper .cards-wrapper .bottom-container {
+  padding: 20px;
+  color: #fff;
+}
+
+.content-wrapper .cards-wrapper .top a {
+  padding: 8px 16px;
+  background: #ff6f32;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  text-align: center;
+}
+
+.content-wrapper .bottom-container .bottom-buttons-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.content-wrapper .bottom-container .bottom-buttons-container a {
+  padding: 8px 16px;
+  background: indianred;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  text-align: center;
+}

@@ -1,0 +1,95 @@
+{% extends 'base_page.html' %}
+
+{% load static %}
+
+{% block title %}
+   Авиарейсы
+{% endblock %}
+
+
+{% block content %}
+
+        <div class="content-wrapper">
+
+            <div class="cards-wrapper">
+
+                <div class="top">
+
+                    <h2>Авиакомпании</h2>
+
+                    <form class="search-bar-wrapper" method="GET" action="/">
+
+                        {% csrf_token %}
+
+                         {% if draft_flight_id %}
+
+                            <a href="/flights/{{ draft_flight_id }}">
+                                Новый авиарейс
+                            </a>
+
+                        {% else  %}
+
+                            <span href="/" class="disabled">
+                                Новый авиарейс
+                            </span>
+
+                        {% endif %}
+
+                        <input type="text" placeholder="Поиск" autocomplete="off" name="query" value="{{ query }}">
+
+                        <button type="submit">
+                            Поиск
+                        </button>
+
+                    </form>
+
+                </div>
+
+                <div class="bottom">
+
+                    {% for airline in airlines %}
+
+                        <div class="card-wrapper">
+
+                            <div class="preview">
+                                <img src="http://127.0.0.1:9000/images/{{ airline.image }}">
+                            </div>
+
+                            <div class="card-content">
+
+                                <div class="content-top">
+
+                                    <h3 class="title">{{ airline.name }}</h3>
+
+                                </div>
+
+                                <div class="content-bottom">
+
+                                    <a href="airlines/{{airline.id}}/add_to_flight/" class="add-to-flight-btn">
+                                        <span>Добавить в авиарейс</span>
+                                    </a>
+
+                                     <a href="airlines/{{airline.id}}/" class="details-link">
+                                        <span>Подробнее</span>
+                                    </a>
+
+                                    <a href="airlines/{{ airline.id }}/delete/" class="delete-link">
+                                        <span>Удалить</span>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends 'home_page.html' %}
+
+{% load static %}
+
+{% block title %}
+   Авиарейс
+{% endblock %}
+
+
+{% block content %}
+
+        <div class="content-wrapper">
+
+            <div class="cards-wrapper">
+
+                <div class="top">
+
+                    <h2>Авиарейс №{{ flight.id }}</h2>
+
+                    <a href="/">
+                        Назад
+                    </a>
+
+                </div>
+
+                <div class="bottom-container">
+
+                    <div class="flight-info-wrapper">
+
+                        <span>Дата создания №{{ flight.date_created }}</span>
+
+                    </div>
+
+                    <h2>Авиакомпании</h2>
+
+                    <div class="airlines-container">
+
+                        {% for airline in airlines %}
+
+                            <div class="card-wrapper">
+
+                                <div class="preview">
+                                    <img src="http://127.0.0.1:9000/images/{{ airline.image }}">
+                                </div>
+
+                                <div class="card-content">
+
+                                    <div class="content-top">
+
+                                        <h3 class="title">{{ airline.name }}</h3>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        {% endfor %}
+
+                    </div>
+
+                    <div class="bottom-buttons-container">
+                        <a href="/flights/{{ flight.id }}/delete/">Очистить</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base_page.html' %}
+
+{% load static %}
+
+{% block title %}
+    {{ airline.name }}
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="content-wrapper">
+
+        <div class="airline-details-wrapper">
+
+            <a class="return-link" href="/">Назад</a>
+
+            <div class="left">
+
+                <img src="http://127.0.0.1:9000/images/{{ airline.image }}">
+
+            </div>
+
+            <div class="right">
+
+                <div class="airline-info-container">
+
+                    <h2>{{ airline.name }}</h2>
+
+                    <br>
+
+                    <span>Описание: {{ airline.description }}</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+{% endblock %}
