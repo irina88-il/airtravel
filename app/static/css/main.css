@@ -1,0 +1,121 @@
+body {
+    background:  #0c73fe;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.search-container {
+    display: flex;
+    margin-bottom: 50px;
+    width: 100%;
+    padding: 25px;
+}
+
+.search-container input {
+    width: 200px;
+    padding: 10px;
+    font-size: 18px;
+    margin-right: 15px;
+    border-radius: 13px ;
+    border: none;
+    font-family: -apple-system,BlinkMacSystemFont,Inter,Roboto,Helvetica,Arial,sans-serif;
+    text-align: center; 
+}
+
+.search-container button {
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 170px;
+    height: 55px;
+    border: none;
+    color: white;
+    background-color: #ff6f32;
+    border-radius: 13px;
+    font-family: -apple-system,BlinkMacSystemFont,Inter,Roboto,Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.airlains-container {
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 15px;
+    font-family: -apple-system,BlinkMacSystemFont,Inter,Roboto,Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.airlain-card {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.airlain-card img {
+    width: 100%;
+}
+
+.airlain-card span {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.airlain-card button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 170px;
+    height: 55px;
+    border: none;
+    color: white;
+    background-color: #ff6f32;
+    border-radius: 13px;
+    font-family: -apple-system,BlinkMacSystemFont,Inter,Roboto,Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    color:#0c73fe;
+}
+
+.container img {
+    width: 500px;
+}
+
+.container h1 {
+    font-size: 32px;
+    color: #fff;
+}
+
+.container span {
+    font-size: 24px;
+    color: #fff;
+}
+
+.container button {
+    margin-top: 50px;
+    padding: 10px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background-color: #ff6f32;
+    border-radius: 13px;
+    font-family: -apple-system,BlinkMacSystemFont,Inter,Roboto,Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}

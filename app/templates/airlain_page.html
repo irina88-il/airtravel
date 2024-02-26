@@ -1,0 +1,39 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+	<meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">  
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Название: {{ airlain.name }}</h1>
+
+       {% if airlain.name == "Аэрофлот" %}
+       <img src="{% static 'image/aeroflot.jpg' %}" alt=""/>
+       {% elif airlain.name == "Победа" %}
+           <img src="{% static 'image/pobeda.jpg' %}" alt=""/>
+       {% elif airlain.name == "Россия" %}
+           <img src="{% static 'image/Ros.jpg' %}" alt=""/>
+        {% elif airlain.name == "S7 Airlines" %}
+           <img src="{% static 'image/s7.jpg' %}" alt=""/>
+        {% elif airlain.name == "Уральсикие авиалинии" %}
+           <img src="{% static 'image/ural.jpg' %}" alt=""/>
+
+       {% endif %}
+
+        <span>Описание: {{ airlain.description }}</span>
+
+       <a href="/">
+            <button>Назад</button>
+       </a>
+
+    </div>
+
+</body>
+</html>
